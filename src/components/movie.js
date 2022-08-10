@@ -21,11 +21,12 @@ const Cart = () => {
         },
       };
       const response = await fetch(
-        "http://localhost:8000/api/movie",
+        "https://mvpback.herokuapp.com/api/movie",
         requestOptions
       );
       if (!response.ok) {
-        history.push("/");
+        history.push("https://mvpfront.herokuapp.com/");
+        // history.push("/");
       } else {
         const data = await response.json();
         let information = data[0];
