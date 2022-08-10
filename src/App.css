@@ -61,7 +61,7 @@ hr {
 
 /* Set a style for the submit/register button */
 .registerbtn {
-  background-color: rgb(6, 116, 243);
+  background-color: rgb(2, 116, 21);
   color: white;
   padding: 16px 20px;
   border: none;
@@ -86,3 +86,12 @@ a {
   background-color: #f1f1f1;
   text-align: center;
 }
+
+/* .watchList {
+  background-color: rgb(121, 226, 1);
+  border-radius: 20px solid green;
+  margin-top: "300px";
+  display: "flex";
+  flex-wrap: wrap;
+  align-content: space-between;
+} */

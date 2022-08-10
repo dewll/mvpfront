@@ -15,7 +15,6 @@ const ItemCard = (props) => {
   const addMovies = async (title, overview, image_link, video_link) => {
     if (token === null) {
       history.push("/");
-      // return <Redirect to="/Signin" />;
     }
 
     const requestOptions = {
@@ -32,7 +31,7 @@ const ItemCard = (props) => {
       }),
     };
     const response = await fetch(
-      "http://localhost:8000/api/movie",
+      "https://mvpback.herokuapp.com/api/movie",
       requestOptions
     );
     const data = await response.json();
@@ -47,8 +46,6 @@ const ItemCard = (props) => {
     window.open(url);
   };
   return (
-    // <div className="col-11 col-md-6 col-lg-3 mx-0 mb-4">
-    // <ErrorMessage message={errorMessage} />
     <div style={{ margin: "5px", padding: "10px" }}>
       <Card
         style={{

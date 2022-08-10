@@ -16,7 +16,7 @@ export const UserProvider = (props) => {
       };
 
       const response = await fetch(
-        "http://localhost:8000/api/current",
+        "https://mvpback.herokuapp.com/api/current",
         requestOptions
       );
 

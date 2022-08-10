@@ -2,17 +2,14 @@ import React, { useEffect, useContext, useState } from "react";
 import { MoviesContext } from "../MoviesContext";
 import ItemCard from "./itemCard";
 import { Container } from "react-bootstrap";
-import { UserContext } from "../UserContext";
-import { Redirect } from "react-router-dom";
 import ErrorMessage from "./errorMessage";
 
 const Home = () => {
-  const [token] = useContext(UserContext);
   const [errorMessage, setErrorMessage] = useState("");
   const [movies, setMovies] = useContext(MoviesContext);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/home")
+    fetch("https://mvpback.herokuapp.com/api/home")
       .then((resp) => {
         console.log(resp);
         if (!resp.ok) {
@@ -26,10 +23,6 @@ const Home = () => {
       });
   }, []);
   console.log(movies.data);
-  if (token === "null") {
-    //return <Redirect to="/" />;
-  }
-
   return (
     <Container fluid>
       <section className="py-4 container">

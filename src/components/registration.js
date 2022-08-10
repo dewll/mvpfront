@@ -30,7 +30,10 @@ const Register = () => {
         password2: confirm_password,
       }),
     };
-    const response = await fetch("http://localhost:8000/api/", requestOptions);
+    const response = await fetch(
+      "https://mvpback.herokuapp.com/api/",
+      requestOptions
+    );
     const data = await response.json();
     console.log(data);
     if (!response.ok) {
