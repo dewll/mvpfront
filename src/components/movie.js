@@ -25,7 +25,7 @@ const Cart = () => {
         requestOptions
       );
       if (!response.ok) {
-        history.push("https://mvpfront.herokuapp.com/");
+        history.push("/");
         // history.push("/");
       } else {
         const data = await response.json();

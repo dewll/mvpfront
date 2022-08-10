@@ -22,7 +22,7 @@ export const UserProvider = (props) => {
 
       if (!response.ok) {
         setToken(null);
-        return <Redirect to="https://mvpfront.herokuapp.com/" />;
+        return <Redirect to="/" />;
       }
       localStorage.setItem("passToken", token);
     };
